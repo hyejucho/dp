@@ -460,7 +460,7 @@ p {
 .headerFamily {
 	width: 100%;
 	height: auto;
-	background-color: #91c8cd;
+	background-color: #D7D2F5;
 	background-image: url(images/B2b.gif);
   	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -489,7 +489,7 @@ p {
 }
 
 .bodyText, li {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'arial';
 	font-size: 19px;
 	line-height: 30px;
 }
@@ -817,7 +817,7 @@ Main components
   height: 12px;
   width: 12px;
   border-radius: 50%;
-  background-color: #91c8cd;
+  background-color: #6D4F8E;
   -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
   -moz-transition: -moz-transform 0.2s, background-color 0.5s;
   transition: transform 0.2s, background-color 0.5s;
