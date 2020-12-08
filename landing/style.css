@@ -1,0 +1,490 @@
+body {
+  background-color: #D7D2F5;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+#laptopimg {
+  width:420px;
+  height:720px;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.phone-wrap {
+  position: absolute;
+  left: auto;
+  -webkit-animation: 8s phone-rotate 2s forwards;
+          animation: 8s phone-rotate 2s forwards;
+}
+.phone-wrap.tablet {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-animation: 10s tablet forwards;
+          animation: 10s tablet forwards;
+  -webkit-transform: scale(0.6) translate(-800px, 117px);
+          transform: scale(0.6) translate(-800px, 117px);
+}
+.phone-wrap.tablet .phone-body,
+.phone-wrap.tablet .phone-back,
+.phone-wrap.tablet .phone-buttons-left,
+.phone-wrap.tablet .phone-speaker,
+.phone-wrap.tablet .phone-charger {
+  -webkit-animation: none;
+          animation: none;
+}
+.phone-wrap.tablet .phone-body {
+  height: 720px;
+  width: 480px;
+}
+.phone-wrap.mobile {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-animation: 10s mobile forwards;
+          animation: 10s mobile forwards;
+  -webkit-transform: scale(0.6) translate(-500px, 158px);
+          transform: scale(0.6) translate(-500px, 158px);
+}
+.phone-wrap.mobile .phone-body,
+.phone-wrap.mobile .phone-back,
+.phone-wrap.mobile .phone-buttons-left,
+.phone-wrap.mobile .phone-speaker,
+.phone-wrap.mobile .phone-charger {
+  -webkit-animation: none;
+          animation: none;
+}
+.phone-body {
+  height: 640px;
+  position: relative;
+  z-index: 2;
+  width: 320px;
+  background-color: #dde4ec;
+  border-radius: 45px;
+  -webkit-animation: 8s phone-size 2s forwards;
+          animation: 8s phone-size 2s forwards;
+  box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.15), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0.7), inset 5px 0 1px -4px rgba(0,0,0,0.3), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0.7), inset 0 -6px 2px -2px rgba(255,255,255,0.4), inset 0 8px 2px -2px rgba(255,255,255,0.3);
+}
+.phone-back {
+  display: block;
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#dde4ec));
+  background-image: linear-gradient(to right, #fff, #dde4ec);
+  position: absolute;
+  -webkit-animation: 8s phone-back 2s forwards;
+          animation: 8s phone-back 2s forwards;
+  z-index: -1;
+  border-radius: 50px;
+  box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+}
+.phone-buttons-left {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: absolute;
+  top: 80px;
+  left: -7px;
+  -webkit-animation: 8s phone-buttons-left 2s forwards;
+          animation: 8s phone-buttons-left 2s forwards;
+}
+.phone-buttons-left div {
+  height: 40px;
+  width: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  border-radius: 3px 0 0 3px;
+  box-shadow: inset -4px 0 1px -4px rgba(0,0,0,0.35);
+}
+.phone-buttons-left .button-google {
+  height: 22px;
+  margin-bottom: 12px;
+}
+.phone-buttons-right {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  position: absolute;
+  top: 120px;
+  right: -7px;
+  z-index: 5;
+  -webkit-animation: 8s phone-buttons-right 2s forwards;
+          animation: 8s phone-buttons-right 2s forwards;
+}
+.phone-buttons-right div {
+  height: 90px;
+  width: 4px;
+  background-color: #eaf1fa;
+  margin: 6px 0;
+  border-radius: 0 3px 3px 0;
+  box-shadow: inset 5px 0 1px -4px rgba(0,0,0,0.11);
+}
+.phone-speaker {
+  position: absolute;
+  z-index: 5;
+  height: 5px;
+  width: 45px;
+  background-color: #d5dce5;
+  border-radius: 6px;
+  left: calc(50% - 45px / 2);
+  top: 25px;
+  -webkit-animation: 8s phone-speaker 2s forwards;
+          animation: 8s phone-speaker 2s forwards;
+}
+.phone-charger {
+  position: absolute;
+  z-index: 5;
+  height: 2px;
+  width: 35px;
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 10px 10px 0 0;
+  left: calc(50% - 45px / 2);
+  bottom: -4px;
+  -webkit-animation: 8s phone-charger 2s forwards;
+          animation: 8s phone-charger 2s forwards;
+}
+.laptop-keyboard {
+  position: absolute;
+  z-index: 5;
+  height: 8px;
+  opacity: 0;
+  width: 900px;
+  left: 55px;
+  top: calc(50% - 4px);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-animation: 8s laptop-keyboard 2s forwards;
+          animation: 8s laptop-keyboard 2s forwards;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(to right, #fff, #fff);
+  box-shadow: inset 12px 0 12px -4px rgba(0,0,0,0.15), inset -12px 0 12px -4px rgba(0,0,0,0.15);
+}
+.laptop-keyboard:after {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 200px;
+  background-color: #fbfdff;
+  position: absolute;
+  left: calc(50% - 100px);
+  box-shadow: inset 16px 0 20px -10px rgba(0,0,0,0.2), inset -16px 0 20px -10px rgba(0,0,0,0.2);
+}
+.laptop-keyboard:before {
+  content: "";
+  height: 20px;
+  width: 100%;
+  background-color: #dde4ec;
+  border-radius: 0 0 100px 100px;
+  position: absolute;
+  bottom: -20px;
+  box-shadow: inset 0 -10px 20px -5px rgba(0,0,0,0.2), 0 12px 10px -8px rgba(0,0,0,0.15);
+}
+@-webkit-keyframes phone-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%, 90% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  90%, 100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@keyframes phone-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%, 90% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  90%, 100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@-webkit-keyframes phone-size {
+  0%, 25% {
+    height: 640px;
+    width: 320px;
+    border-radius: 45px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.15), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0.7), inset 5px 0 1px -4px rgba(0,0,0,0.3), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0.7), inset 0 -6px 2px -2px rgba(255,255,255,0.4), inset 0 8px 2px -2px rgba(255,255,255,0.3);
+  }
+  25%, 50% {
+    height: calc(640px * 0.8);
+    width: calc(320px * 0.8);
+    border-radius: 40px;
+  }
+  50%, 75% {
+    height: 720px;
+    width: 480px;
+    border-radius: 45px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.15), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0.7), inset 5px 0 1px -4px rgba(0,0,0,0.3), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0.7), inset 0 -6px 2px -2px rgba(255,255,255,0.4), inset 0 8px 2px -2px rgba(255,255,255,0.3);
+  }
+  75%, 100% {
+    height: 720px;
+    width: 480px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.1), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0), inset 5px 0 1px -4px rgba(0,0,0,0.1), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0), inset 0 -6px 2px -2px rgba(255,255,255,0), inset 0 8px 2px -2px rgba(255,255,255,0);
+  }
+}
+@keyframes phone-size {
+  0%, 25% {
+    height: 640px;
+    width: 320px;
+    border-radius: 45px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.15), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0.7), inset 5px 0 1px -4px rgba(0,0,0,0.3), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0.7), inset 0 -6px 2px -2px rgba(255,255,255,0.4), inset 0 8px 2px -2px rgba(255,255,255,0.3);
+  }
+  25%, 50% {
+    height: calc(640px * 0.8);
+    width: calc(320px * 0.8);
+    border-radius: 40px;
+  }
+  50%, 75% {
+    height: 720px;
+    width: 480px;
+    border-radius: 45px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.15), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0.7), inset 5px 0 1px -4px rgba(0,0,0,0.3), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0.7), inset 0 -6px 2px -2px rgba(255,255,255,0.4), inset 0 8px 2px -2px rgba(255,255,255,0.3);
+  }
+  75%, 100% {
+    height: 720px;
+    width: 480px;
+    border-radius: 20px 0 0 20px;
+    box-shadow: inset 0 1px 1px 0px rgba(0,0,0,0.1), inset 0 -1px 1px 0px rgba(0,0,0,0.1), inset 10px 6px 2px -4px rgba(255,255,255,0), inset 5px 0 1px -4px rgba(0,0,0,0.1), inset -3px 0 1px -2px rgba(0,0,0,0.15), inset -5px 0 1px -2px rgba(255,255,255,0), inset 0 -6px 2px -2px rgba(255,255,255,0), inset 0 8px 2px -2px rgba(255,255,255,0);
+  }
+}
+@-webkit-keyframes phone-back {
+  0%, 25% {
+    border-radius: 50px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#dde4ec));
+    background-image: linear-gradient(to right, #fff, #dde4ec);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  25%, 50% {
+    border-radius: 45px;
+    background-image: linear-gradient(45deg, #fff, #dde4ec);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  50%, 75% {
+    border-radius: 50px;
+    background-image: linear-gradient(45deg, #fff, #eff4f9);
+    width: calc(100% + 8px);
+    left: 50%;
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  75%, 100% {
+    border-radius: 23px 10px 10px 23px;
+    width: calc(100% + 40px);
+    left: calc(50% + 16px);
+    background-image: linear-gradient(45deg, #fff, #eff4f9);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0), 20px 10px 20px 0 rgba(0,0,0,0), 5px 5px 7px 0 rgba(0,0,0,0);
+  }
+}
+@keyframes phone-back {
+  0%, 25% {
+    border-radius: 50px;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#dde4ec));
+    background-image: linear-gradient(to right, #fff, #dde4ec);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  25%, 50% {
+    border-radius: 45px;
+    background-image: linear-gradient(45deg, #fff, #dde4ec);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  50%, 75% {
+    border-radius: 50px;
+    background-image: linear-gradient(45deg, #fff, #eff4f9);
+    width: calc(100% + 8px);
+    left: 50%;
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0.1), 20px 10px 20px 0 rgba(0,0,0,0.05), 5px 5px 7px 0 rgba(0,0,0,0.1);
+  }
+  75%, 100% {
+    border-radius: 23px 10px 10px 23px;
+    width: calc(100% + 40px);
+    left: calc(50% + 16px);
+    background-image: linear-gradient(45deg, #fff, #eff4f9);
+    box-shadow: 0 0 50px 5px rgba(0,0,0,0), 20px 10px 20px 0 rgba(0,0,0,0), 5px 5px 7px 0 rgba(0,0,0,0);
+  }
+}
+@-webkit-keyframes phone-buttons-left {
+  0%, 50%, 75% {
+    left: -7px;
+  }
+  75%, 100% {
+    left: 0;
+  }
+}
+@keyframes phone-buttons-left {
+  0%, 50%, 75% {
+    left: -7px;
+  }
+  75%, 100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes phone-buttons-right {
+  0%, 50%, 75% {
+    right: -7px;
+    z-index: 5;
+  }
+  75%, 100% {
+    right: 0;
+    z-index: 0;
+  }
+}
+@keyframes phone-buttons-right {
+  0%, 50%, 75% {
+    right: -7px;
+    z-index: 5;
+  }
+  75%, 100% {
+    right: 0;
+    z-index: 0;
+  }
+}
+@-webkit-keyframes phone-speaker {
+  0%, 50%, 75% {
+    opacity: 1;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes phone-speaker {
+  0%, 50%, 75% {
+    opacity: 1;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes phone-charger {
+  0%, 50%, 75% {
+    opacity: 1;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes phone-charger {
+  0%, 50%, 75% {
+    opacity: 1;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes laptop-keyboard {
+  0%, 50%, 75% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes laptop-keyboard {
+  0%, 50%, 75% {
+    opacity: 0;
+  }
+  75%, 100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes laptop {
+  0%, 80% {
+    left: auto;
+  }
+  80%, 100% {
+    left: 300px;
+  }
+}
+@keyframes laptop {
+  0%, 80% {
+    left: auto;
+  }
+  80%, 100% {
+    left: 300px;
+  }
+}
+@-webkit-keyframes mobile {
+  0%, 80% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translate(-300px, 158px);
+            transform: scale(0.6) translate(-300px, 158px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0.6) translate(-500px, 158px);
+            transform: scale(0.6) translate(-500px, 158px);
+  }
+}
+@keyframes mobile {
+  0%, 80% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translate(-300px, 158px);
+            transform: scale(0.6) translate(-300px, 158px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0.6) translate(-500px, 158px);
+            transform: scale(0.6) translate(-500px, 158px);
+  }
+}
+@-webkit-keyframes tablet {
+  0%, 70% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translate(-600px, 117px);
+            transform: scale(0.6) translate(-600px, 117px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0.6) translate(-800px, 117px);
+            transform: scale(0.6) translate(-800px, 117px);
+  }
+}
+@keyframes tablet {
+  0%, 70% {
+    opacity: 0;
+    -webkit-transform: scale(0.6) translate(-600px, 117px);
+            transform: scale(0.6) translate(-600px, 117px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0.6) translate(-800px, 117px);
+            transform: scale(0.6) translate(-800px, 117px);
+  }
+}
