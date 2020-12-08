@@ -1,4 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+
 
 body {
 		background: white;
@@ -317,6 +319,7 @@ a:hover {
 h1 {
 	font-family: 'Spectral', serif;
 	text-shadow: 0px;
+	
 }
 
 h2 {
@@ -324,7 +327,8 @@ h2 {
 }
 
 p {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'arial';
+
 }
 
 .entirecontent {
@@ -480,7 +484,7 @@ p {
 
 .quickTitle {
 	font-family: 'Spectral', serif;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: 600;
 }
 
@@ -1293,6 +1297,7 @@ textarea:focus{background:#f4f4f4; height:250px;}
 
 form {
 	margin-top: 2em;
+	box-align: center;
   }
 
   .hide {
@@ -1301,8 +1306,9 @@ form {
   }
   
   label {
+	font-family: arial;
 	display: inline-block;
-	background: lightslategray;
+	background: #D7D2F5;
 	margin: 25px;
 	position: relative;
 	width: 120px;
@@ -1336,19 +1342,19 @@ form {
 	cursor: url('../img/Alright.png'), auto;
   }
   #Alright:checked ~ .option-Alright {
-	background: yellow;
+	background: rgb(243, 243, 135);
   }
 
   #Bad ~ .option-Bad {
 	cursor: url('../img/Bad.png'), auto;
   }
   #Bad:checked ~ .option-Bad {
-	background: green;
+	background: rgb(126, 194, 126);
   }
 
   #Horrible ~ .option-Horrible {
 	cursor: url('../img/Horrible.png'), auto;
   }
   #Horrible:checked ~ .option-Horrible {
-	background: red;
+	background: rgb(255, 105, 105);
   }
